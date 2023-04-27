@@ -7,6 +7,7 @@ import ma.codipster.productservice.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -29,13 +30,13 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<Void> createProduct(@RequestBody ProductRequest productRequest){
         productService.createProduct(productRequest);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.created(URI.create("/api/product")).build();
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Void> updateProduct(@RequestBody ProductRequest productRequest, @PathVariable String id){
         productService.updateProduct(productRequest, id);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.created(URI.create("/api/product")).build();
     }
 
 }
