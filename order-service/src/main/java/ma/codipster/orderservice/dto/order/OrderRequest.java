@@ -5,6 +5,7 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ma.codipster.orderservice.dto.orderlineitems.OrderLineItemsDto;
 import ma.codipster.orderservice.model.OrderLineItems;
 
 import java.util.List;
@@ -13,5 +14,5 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderRequest {
-    private List<OrderLineItems> orderLineItemsList;
+    private List<OrderLineItemsDto> orderLineItemsList;
 }

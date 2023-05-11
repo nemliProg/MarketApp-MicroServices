@@ -22,4 +22,7 @@ public class OrderLineItems {
     private String skuCode;
     private BigDecimal price;
     private Integer quantity;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Order order;
 }
