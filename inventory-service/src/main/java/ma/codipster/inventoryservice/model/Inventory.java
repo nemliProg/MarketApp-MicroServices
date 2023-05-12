@@ -14,6 +14,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Inventory {
 
+    public Inventory(String skuCode, Integer quantity) {
+        this.skuCode = skuCode;
+        this.quantity = quantity;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

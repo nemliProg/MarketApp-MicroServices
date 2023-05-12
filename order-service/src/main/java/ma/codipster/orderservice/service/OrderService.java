@@ -1,6 +1,5 @@
 package ma.codipster.orderservice.service;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import ma.codipster.orderservice.dto.order.OrderRequest;
 import ma.codipster.orderservice.mappers.OrderLineItemsMapper;
@@ -8,6 +7,7 @@ import ma.codipster.orderservice.model.Order;
 import ma.codipster.orderservice.model.OrderLineItems;
 import ma.codipster.orderservice.repository.OrderRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
